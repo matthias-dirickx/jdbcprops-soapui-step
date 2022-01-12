@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tns:soapui-factories xmlns:tns="http://eviware.com/soapui/config">
+     <tns:factory id="JdbcPropsTestStep"
+	              factoryType="com.eviware.soapui.impl.wsdl.teststeps.registry.WsdlTestStepFactory"
+				  factoryClass="be.mdi.tooling.soapui.steps.dbprops.JdbcPropsTestStepFactory"/>
+				  
+     <tns:factory id="JdbcPropsTestStepPanelBuilder" 
+                  factoryType="com.eviware.soapui.model.util.PanelBuilderFactory" 
+                  factoryClass="be.mdi.tooling.soapui.steps.dbprops.JdbcPropsTestStepPanelBuilderFactory"/>
+</tns:soapui-factories>

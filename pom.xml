@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>be.fgov.ibz.rrn.tooling</groupId>
+  <artifactId>soapui-jdbc-properties-step</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JDBC Properties Step</name>
+  <description>Set a series of properties based on a JDBC Step Output.</description>
+  
+  	<developers>
+		<developer>
+		    <id>mdi</id>
+		    <roles>
+		        <role>Lead</role>
+		    </roles>
+		    <name>Matthias Dirickx</name>
+		</developer>
+    </developers>
+    
+	<properties>
+       <java.version>1.8</java.version>
+       <project.encoding>UTF-8</project.encoding>
+       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<dependencies>
+	    <!-- Core SoapUI dependencies -->
+	    <dependency>
+		    <groupId>com.smartbear.soapui</groupId>
+		    <artifactId>soapui</artifactId>
+		    <version>5.6.0</version>
+		</dependency>
+		
+		<!-- Test dependencies -->
+		<dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter-api</artifactId>
+	        <version>5.7.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter-engine</artifactId>
+	        <version>5.7.0</version>
+	        <scope>test</scope>
+	    </dependency>
+		<dependency>
+		    <groupId>org.assertj</groupId>
+		    <artifactId>assertj-core</artifactId>
+		    <version>3.15.0</version>
+		    <scope>test</scope>
+		</dependency>
+    </dependencies>
+    
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.8.0</version>
+	            <configuration>
+	                <source>${java.version}</source>
+	                <target>${java.version}</target>
+	                <encoding>${project.encoding}</encoding>
+	            </configuration>
+	        </plugin>
+	        <!--
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-assembly-plugin</artifactId>
+	            <configuration>
+	                <descriptors>
+	                    <descriptor>src/main/resources/assembly.xml</descriptor>
+	                </descriptors>
+	            </configuration>
+                   <executions>  
+                       <execution>
+                           <id>make-fat-assembly</id>
+                           <phase>install</phase>  
+                           <goals>  
+                               <goal>single</goal>  
+                           </goals>
+                       </execution>  
+                   </executions>  
+	        </plugin>
+	        -->
+	    </plugins>
+	</build>
+    
+    <distributionManagement>
+	    <repository>
+	        <id>RRN-Releases</id>
+	        <url>http://10.0.242.149:8081/repository/RRN-Releases</url>
+	    </repository>
+	</distributionManagement>
+</project>

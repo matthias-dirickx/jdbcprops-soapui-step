@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-listeners xmlns:tns="http://eviware.com/soapui/config">
+
+<tns:listener id="JdbcPropsLaunchProjectListener"
+              listenerClass="be.mdi.tooling.soapui.steps.dbprops.listeners.JdbcPropsLaunchProjectListener"
+              listenerInterface="com.eviware.soapui.model.testsuite.ProjectRunListener" />
+
+<tns:listener id="JdbcPropsLaunchTestSuiteListener"
+              listenerClass="be.mdi.tooling.soapui.steps.dbprops.listeners.JdbcPropsLaunchTestSuiteListener"
+              listenerInterface="com.eviware.soapui.model.testsuite.TestSuiteRunListener" />
+
+<tns:listener id="JdbcPropsLaunchTestCaseRunListener"
+              listenerClass="be.mdi.tooling.soapui.steps.dbprops.listeners.JdbcPropsLaunchTestCaseRunListener"
+              listenerInterface="com.eviware.soapui.model.testsuite.TestRunListener" />
+
+</tns:soapui-listeners>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="44606920-c492-4919-a4bb-0d8dad818bce" activeEnvironment="Default" name="Project 3" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:testSuite id="ec9c657d-1bf3-4707-9dd3-7223d0324b14" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="9917d44f-9711-486f-997c-8fefc319923f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="jdbc" name="Copy of Get Name" id="78a56598-6522-40a2-ac34-d0782c266ab4"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://10.0.229.56:5433/db_int?user=jordi&amp;password=jordi</con:connectionString><con:query>select nomkey as name_db_key,
+       tx_code as tx_code,
+       nomart as text_name_rnascii,
+       name_decoded as text_name_latin1,
+       name_only_decoded as name_bytes
+from support_get_random_last_name();
+
+
+
+
+</con:query><con:assertion type="JDBC Status" id="b4b38b97-0a51-447e-8ebd-e134b1b25ada" name="JDBC Status"/><con:properties/></con:config></con:testStep><con:testStep type="jdbc-props-step" name="JDBC Properties TestStep" id="ec42782b-e516-422a-96b6-b9bd49cc21fa"><con:settings/><con:config><sourceStep>Copy of Get Name</sourceStep><suffix>suff</suffix><validityScope>TESTCASE</validityScope><limitOne>false</limitOne><axisType>COLUMN</axisType><cleanPropertiesAfterRun>true</cleanPropertiesAfterRun></con:config></con:testStep><con:properties><con:property><con:name>name_db_key</con:name><con:value>10336847</con:value></con:property><con:property><con:name>10336847</con:name><con:value>336847</con:value></con:property><con:property><con:name>name_db_key_1</con:name><con:value>10336847</con:value></con:property><con:property><con:name>name_db_key_suff</con:name><con:value>10336847</con:value></con:property><con:property><con:name>name_db_key_suff_1</con:name><con:value>10336847</con:value></con:property><con:property><con:name>10336847_suff_1</con:name><con:value>336847</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
